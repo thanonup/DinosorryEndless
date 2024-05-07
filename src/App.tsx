@@ -17,51 +17,31 @@ const App = () => {
 
     console.log('width : ' + width + 'height : ' + height)
 
-    switch (gameState) {
-        case GameState.GamePlay:
-        case GameState.Menu:
-            return (
-                <Stage width={width} height={height} options={{ background: 0xffffff }}>
-                    <BackgroundView x={0} y={height / 2} gameState={gameState} />
-                    <ObstacleSpawnView
-                        x={width}
-                        y={height / 2 + 15}
-                        gameState={gameState}
-                        width={width}
-                        player={player}
-                        setState={setState}
-                    />
-                    <PlayerView x={100} y={height / 2 + 10} gameState={gameState} player={player} />
-                    {/* <Sprite
-                        image={'/assets/dinosaur_die.png'}
-                        x={width - 50}
-                        y={20}
-                        interactive={true}
-                        pointerdown={() => {
-                            setState(GameState.GameOver)
-                        }}
-                    /> */}
-                    <ScoreUIView x={width - 100} y={height / 2 - 150} gameState={gameState} />
-                </Stage>
-            )
-        case GameState.GameOver:
-            return (
-                <Stage width={width} height={height} options={{ background: 0xffffff }}>
-                    <BackgroundView x={0} y={height / 2} gameState={gameState} />
-                    <ObstacleSpawnView
-                        x={width}
-                        y={height / 2 + 15}
-                        gameState={gameState}
-                        width={width}
-                        player={player}
-                        setState={setState}
-                    />
-                    <PlayerView x={100} y={height / 2 + 10} gameState={gameState} player={player} />
-                    <GameoverView x={width / 2} y={height / 2 - 100} setState={setState} />
-                    <ScoreUIView x={width - 100} y={height / 2 - 150} gameState={gameState} />
-                </Stage>
-            )
-    }
+    return (
+        <Stage width={width} height={height} options={{ background: 0xffffff }}>
+            <BackgroundView x={0} y={height / 2} gameState={gameState} />
+            <ObstacleSpawnView
+                x={width}
+                y={height / 2 + 15}
+                gameState={gameState}
+                width={width}
+                player={player}
+                setState={setState}
+            />
+            <PlayerView x={100} y={height / 2 + 10} gameState={gameState} player={player} />
+            {/* <Sprite
+                image={'/assets/dinosaur_die.png'}
+                x={width - 50}
+                y={20}
+                interactive={true}
+                pointerdown={() => {
+                    setState(GameState.GameOver)
+                }}
+            /> */}
+            <GameoverView x={width / 2} y={height / 2 - 100} gameState={gameState} setState={setState} />
+            <ScoreUIView x={width - 100} y={height / 2 - 150} gameState={gameState} />
+        </Stage>
+    )
 }
 
 export default App
