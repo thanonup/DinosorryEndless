@@ -9,8 +9,8 @@ interface Position {
 }
 
 const BackgroundView = ({ x, y, gameState }: Position) => {
-    const groundUrl = '/src/assets/ground.png'
-    const cloudUrl = '/src/assets/cloud.png'
+    const groundUrl = '/assets/ground.png'
+    const cloudUrl = '/assets/cloud.png'
 
     const [tileCloudPosition, setTileCloudPosition] = useState({ x: 0, y: 0 })
     const [tileGroundPosition, setTileGroundPosition] = useState({ x: 0, y: 0 })

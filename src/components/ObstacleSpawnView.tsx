@@ -13,7 +13,7 @@ interface Props {
 }
 
 const ObstacleSpawnView = ({ x, y, gameState, width, player, setState }: Props) => {
-    const obstacleURL = '/src/assets/obstacle_single.png'
+    const obstacleURL = '/assets/obstacle_single.png'
     const [position, setPosition] = useState<number>(0)
     const obstacle = useRef<any>()
 

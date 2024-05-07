@@ -1,10 +1,7 @@
 import { Container, Text, Sprite } from '@pixi/react'
 import { TextStyle } from 'pixi.js'
 import React, { useState, useEffect } from 'react'
-import { changeState } from '../store/Reducer'
-import { useDispatch } from 'react-redux'
 import { GameState } from '../states/GameState'
-import { useAppDispathch, useAppSelector } from '../store/Store'
 
 interface Prop {
     x: number
@@ -13,7 +10,7 @@ interface Prop {
 }
 
 const GameoverView = ({ x, y, setState }: Prop) => {
-    const buttonUrl = '/src/assets/restart-button.png'
+    const buttonUrl = '/assets/restart-button.png'
 
     const [scale, setScales] = useState({ x: 1, y: 1 })
 

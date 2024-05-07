@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'PixelifySans-Regular';
-  src: url('/src/assets/PixelifySans-Regular.ttf') format('truetype');
+  src: url('/assets/PixelifySans-Regular.ttf') format('truetype');
 }
 
 #root {

@@ -17,7 +17,7 @@ const PlayerView = ({ x, y, gameState, player }: Props) => {
     const [isGrounded, setIsGround] = useState(true)
 
     const jumpForce = -100
-    const dinoImagesDieUrl = '/src/assets/dinosaur_die.png'
+    const dinoImagesDieUrl = '/assets/dinosaur_die.png'
 
     let fired: boolean
 
@@ -59,11 +59,7 @@ const PlayerView = ({ x, y, gameState, player }: Props) => {
     })
 
     useEffect(() => {
-        const dinoImages = [
-            '/src/assets/dinosaur.png',
-            '/src/assets/dinosaur_left.png',
-            '/src/assets/dinosaur_right.png',
-        ]
+        const dinoImages = ['/assets/dinosaur.png', '/assets/dinosaur_left.png', '/assets/dinosaur_right.png']
         const textureArray: Texture[] = []
 
         for (let i = 0; i < dinoImages.length; i++) {

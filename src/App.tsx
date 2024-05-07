@@ -32,15 +32,15 @@ const App = () => {
                         setState={setState}
                     />
                     <PlayerView x={100} y={height / 2 + 10} gameState={gameState} player={player} />
-                    <Sprite
-                        image={'/src/assets/dinosaur_die.png'}
+                    {/* <Sprite
+                        image={'/assets/dinosaur_die.png'}
                         x={width - 50}
                         y={20}
                         interactive={true}
                         pointerdown={() => {
                             setState(GameState.GameOver)
                         }}
-                    />
+                    /> */}
                     <ScoreUIView x={width - 100} y={height / 2 - 150} gameState={gameState} />
                 </Stage>
             )
