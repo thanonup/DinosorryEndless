@@ -5,6 +5,7 @@ GitHub open-source : https://github.com/pixijs/pixi-react
 
 #
 created for education and practice how to write game from pixi-react with typescript result is simple game not full version from reference game
+#
 Build Game : https://dinosorrygamepixi.web.app/
 
 #
